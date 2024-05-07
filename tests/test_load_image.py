@@ -4,13 +4,7 @@ import unittest
 
 class LoadImageTestCase(unittest.TestCase):
     def setUp(self):
-        self.image_metadata = self.load_test_image_metadata()
-
-    def load_test_image_metadata(self):
-        # Load test image path from config.json
-        with open('./configuration/config.json') as f:
-            config = json.load(f)
-            return config['test_image']
+        self.image_metadata = load_test_image_metadata.load_test_image_metadata()
 
     def test_import(self):
         # Test module import
