@@ -1,20 +1,20 @@
-import skimage as ski
-from matplotlib import  pyplot as plt
-import cv2
+import sys
+from skimage import io
 
-def img_loader():
-    filepath = input("type image path:")
-    image_show = ski.io.imshow(filepath)
-    plt.show()
-    image = ski.io.imread(filepath)
-    im = cv2.imread(filepath)
+def load_image(image_path):
+    try:
+        image = io.imread(image_path)
+        return image
+    except Exception as e:
+        print("Error:", e)
 
-    print(type(im))
+def show_image(image):
+    io.imshow(image)
+    io.show()
 
-    print(im.shape)
-    print(type(im.shape))
-
-    print('the image',filepath,'was loaded')
-    return image
-
-img_loader()
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <image_path>")
+    else:
+        image_path = sys.argv[1]
+        load_image(image_path)

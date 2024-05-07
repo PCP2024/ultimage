@@ -2,7 +2,8 @@ import json
 
 parameters = {
     'test_image': {
-        'path': './demo_data/test.png'
+        'path': './demodata/test.png',
+        'dimensions': (99, 150, 3)
     },
     'group_members': {
         'Gera': 'Parra',
