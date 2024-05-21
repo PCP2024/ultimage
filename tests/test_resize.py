@@ -1,12 +1,13 @@
 import json
 import numpy as np
 import unittest
+import dataio.load_image as load
 
 class ResizeTestCase(unittest.TestCase):
     def setUp(self):
         self.image_metadata = self.load_test_image_metadata()
         self.factor = 2
-        self.image = load_image.load_image(self.image_metadata['path'])
+        self.image = load.load_image(self.image_metadata['path'])
         self.image_dimensions = self.image_metadata['dimensions']
 
     def test_import(self):
