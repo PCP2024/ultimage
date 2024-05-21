@@ -8,4 +8,4 @@ class ImageRotateTestCase(unittest.TestCase):
         self.image = dataio.load_image.load_image(self.image_metadata['path'])
 
     def test_image_rotate_360(self):
-        self.assertEqual(self.image, 360)
+        self.assertEqual(self.image, processing.rotate.rotate(self.image, 360))
