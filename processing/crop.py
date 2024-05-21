@@ -16,12 +16,10 @@ def image_crop(imagepath, x_start, x_end, y_start, y_end):
 
     return crop_image
 
-
-
  
+#if __name__ == '__main__':
+#   path = os.getcwd()
+#   os.chdir('..')
+#   image_crop("demodata\\test.png", 1, 300, 1, 300)
 
-#path = os.getcwd()
-#os.chdir('..')
-#image_crop("demodata\\test.png", 1, 300, 1, 300)
-
-#image_crop("testimg.jpg", 1, 300, 1, 300)
+#   image_crop("testimg.jpg", 1, 300, 1, 300)
