@@ -1,8 +1,98 @@
 # Changelog
 Tracking changes to ultimage
 
+## [0.1.2] - 2024.07.02
+### Added
+- retroactively added updates to changelog
+- VERSION file
+
+### Changed
+- added required libraries to requirements.txt
+
+## [0.1.1] - 2024.05.28
+### Added
+- tests for blurring functions
+- image gaussian and normalized box blurring functions
+- mirror image function in rotae module
+
+### Changed
+- test image dimensions in config.json
+
+### Fixed
+- Importing and assertion bugs in tests
+
+## [0.1.0] - 2024.05.21
+### Added
+- basic CLI with crop, rotate, resize functionality
+
+### Fixed
+- invalid assertion in test rotate
+
+## [0.0.6] - 2024.05.21
+### Added
+- tests
+    - crop
+- functions
+    - crop
+    - text overlay
+- miscellaneous
+    - test images in demodata
+
+### Changed
+- moved test images to demodata folder
+
+### Fixed
+- tests
+    - bug from previously not importing load_image/processing modules
+    - bugs in test_rotate assertion 
+
+### Removed
+- redundant test_img_loader test
+
+## [0.0.5] - 2024.05.14
+### Fixed
+- resize function
+
+## [0.0.4] - 2024.05.08
+### Changed
+- rotate function: flesh out functionality
+- test for load_image: use load_test_image_metadata()
+
+## [0.0.3] - 2024.05.07
+### Added
+- tests
+    - rotate
+    - resize
+- functions
+    - rotate
+    - resize
+- miscellaneous
+    - config.json
+    - demo image for testing
+
+### Changed
+- image loader function: image_loader -> load_image
+- load image test: use demodata image/config.json 
+
+## [0.0.2] - 2024.04.30
+### Added 
+- tests
+    - image loader
+- image processing functions
+    - image loader
+    - image cropper
+
+### Removed
+- placeholder files needed for folder structure
+
 ## [0.0.1] - 2024.04.23
 ### Added
-- Created repository
-- Added LICENSE
-- Added requirements.txt
+- GitHub repository with project basics
+    - LICENSE
+    - requirements.txt
+    - folder structure
+    - .gitignore
+    - basic README
+
+### Removed
+- placeholder files needed for folder structure
