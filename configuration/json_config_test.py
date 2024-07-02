@@ -1,6 +1,9 @@
 import json
 
 parameters = {
+    'ultimage': {
+        'version': 0.1
+    },
     'test_image': {
         'path': './demodata/test.png',
         'dimensions': (99, 150, 3)

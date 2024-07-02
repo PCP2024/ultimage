@@ -1,4 +1,5 @@
 import argparse
+import json
 import dataio.load_image as load_image
 import processing.crop as crop
 import processing.rotate as rotate
@@ -17,6 +18,7 @@ def main():
     parser.add_argument("--angle", type=int, help="The angle of rotation in degrees (only for rotate operation).")
     parser.add_argument("--coords", nargs=4, type=list, help="The coordinates of the crop region in the form [x_start, x_end, y_start, y_end] (only for crop operation).")
     parser.add_argument("--scale", type=float, help="The scaling factor (only for resize operation).")    
+    parser.add_argument('-v','--version', action='store_true', help='Output software version')
 
     # parse arguments
     args = parser.parse_args()
@@ -44,6 +46,11 @@ def main():
     if not args.noshow:
         load_image.show_image(image)
         load_image.show_image(new_image)
+
+    if args.version:
+        with open('./configuration/config.json') as f:
+            config = json.load(f)
+            print(f'Version: {config['ultimage']['version']}')
 
 if __name__ == "__main__":
     main()
