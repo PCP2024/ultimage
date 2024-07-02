@@ -5,11 +5,7 @@ Tracking changes to ultimage
 ### Added
 - retroactively added updates to changelog
 - VERSION file
-<<<<<<< Updated upstream
 - requirements.txt file
-=======
-- requirements.txt
->>>>>>> Stashed changes
 
 ### Changed
 - added required libraries to requirements.txt
