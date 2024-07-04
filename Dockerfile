@@ -12,5 +12,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
 COPY . .
 # Can add a command to run an application here
-CMD ["python", "time.py"]
+CMD ["python", "main_ultimage.py"]
 
