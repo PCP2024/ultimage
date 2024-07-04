@@ -1,12 +1,10 @@
-import json
 import numpy as np
 import unittest
-import demodata.load_test_image_metadata as dd
 import dataio.load_image as load
 
 class LoadImageTestCase(unittest.TestCase):
     def setUp(self):
-        self.image_metadata = dd.load_test_image_metadata(self)
+        self.image_metadata = load.load_test_image_metadata()
 
     def test_import(self):
         # Test module import

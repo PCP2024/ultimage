@@ -1,6 +1,34 @@
 # Changelog
 Tracking changes to ultimage
 
+## [0.1.3] - 2024.07.04
+### Added
+- tests
+    - save module
+    - text overlay module
+- save module with save_image function
+- CLI commands/functionalities
+    - saving images
+    - mirroring images
+    - adding text to images
+    - functionality for running multiple commands in one go
+
+### Changed
+- renamed CLI file from maincmd to main_ultimage
+- renamed test_img_crop to test_crop
+- renamed test_load_image to test_load
+- moved load_test_image_metadata from demodata folder to load_image module
+
+### Fixed
+- fixed inappropriate implementation of crop, which loaded image from image path
+- restructured CLI and fixed deficiencies
+    - buggy crop command
+    - suboptimal organization of commands
+
+### Removed
+- redundant test image
+
+
 ## [0.1.2] - 2024.07.02
 ### Added
 - retroactively added updates to changelog
