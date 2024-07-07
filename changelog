@@ -1,6 +1,11 @@
 # Changelog
 Tracking changes to ultimage
 
+## [0.1.4] - 2024.07.07
+### Added 
+- docker image link in README.md
+
+
 ## [0.1.3] - 2024.07.04
 ### Added
 - tests
@@ -12,6 +17,8 @@ Tracking changes to ultimage
     - mirroring images
     - adding text to images
     - functionality for running multiple commands in one go
+- Docker
+    - dockerfile
 
 ### Changed
 - renamed CLI file from maincmd to main_ultimage
