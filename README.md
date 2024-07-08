@@ -38,7 +38,7 @@ docker run -it ultimage /bin/bash
 ## Usage 
 Ultimage provides a command-line interface with various options to process images. Below are the available arguments and their descriptions:
 ```
-main_ultimage.py [-h] [-v] [-n] [-s] [-i IN_PATH] [-o OUT_PATH] [-r ANGLE] [-m {-1,1}] [-c X0 Y0 X1 X1] [-rs SCALE] [-t TEXT X Y COLOR SIZE]
+main_ultimage.py [-h] [-v] [-n] [-s] [-i IN_PATH] [-o OUT_PATH] [-r ANGLE] [-m {-1,1}] [-c X0 Y0 WIDTH HEIGHT] [-rs SCALE] [-t TEXT X Y COLOR SIZE] [-bg KSIZE SIGMA] [-bn KSIZE]
 ```
 
 ### Arguments
@@ -49,9 +49,11 @@ main_ultimage.py [-h] [-v] [-n] [-s] [-i IN_PATH] [-o OUT_PATH] [-r ANGLE] [-m {
 - `-o OUT_PATH`, `--out_path OUT_PATH`: The path to the output file.
 - `-r ANGLE`, `--rotate ANGLE`: The angle of rotation in degrees.
 - `-m {-1,1}`, `--mirror {-1,1}`: The axis of mirroring (-1 for vertical, 1 for horizontal).
-- `-c [X0 X1 Y0 Y1]`, `--crop [X0 X1 Y0 Y1]`: The coordinates of the crop region in the form [x_start, x_end, y_start, y_end].
+- `-c [X0 Y0 WIDTH HEIGHT]`, `--crop [X0 Y0 WIDTH HEIGHT]`: The coordinates of the crop region in the form [X0 Y0 WIDTH HEIGHT].
 - `-rs SCALE`, `--scale SCALE`: The factor to rescale the image by (out of 1).
 - `-t [TEXT X Y COLOR SIZE]`, `--text [TEXT X Y COLOR SIZE]`: The text to overlay on the image, the coordinates, and font size and color in the form ['text', left, top, color, size].
+- `-bg [KSIZE1 KSIZE2 SIGMA]`, `-blur_gauss [KSIZE1 KSIZE2 SIGMA]`: The kernel size and sigma for Gaussian blur in the form [ksize1, ksize2, sigma].
+- `-bn [KSIZE1 KSIZE2]`, `-blur_gauss [KSIZE1 KSIZE2]`: The kernel size for normalized box blur the form [ksize1, ksize2]
 
 ## Examples
 - Display version
@@ -68,7 +70,7 @@ python3 main_ultimage.py -i demodata/demo.jpg -o demodata/output.jpg -r 45 -n
 ```
 - Crop an image to the upper leftmost 100 x 200 pixels and prevent it from displaying
 ```
-python3 main_ultimage.py -i demodata/demo.jpg --crop 0 100 0 200 -n
+python3 main_ultimage.py -i demodata/demo.jpg --crop 0 0 100 200 -n
 ```
 - Rescale an image to 50% of its original size and add text overlay
 ```

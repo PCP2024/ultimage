@@ -1,6 +1,13 @@
 # Changelog
 Tracking changes to ultimage
 
+## [1.0.5] - 2024.07.08
+## Added 
+- Added crop_or_pad function to crop module
+
+## Changed
+- Replaced crop function in CLI with crop_or_pad
+
 ## [1.0.4] - 2024.07.08
 ### Added
 - Added more default parameters to config.json
