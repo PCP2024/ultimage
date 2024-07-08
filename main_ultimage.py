@@ -53,7 +53,8 @@ def main():
         if args.mirror:
             new_image = rotate.mirror_image(new_image, args.mirror)
         if args.crop:
-            new_image = crop.image_crop(new_image, args.crop)
+            # new_image = crop.image_crop(new_image, args.crop)
+            new_image = crop.crop_or_pad_image(new_image, args.crop[0], args.crop[1], args.crop[2], args.crop[3])
         if args.scale:
             if args.scale > 1:
                 new_image = resize.enlarge(new_image, args.scale)

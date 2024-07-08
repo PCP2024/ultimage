@@ -7,7 +7,7 @@ def load_defaults():
     
 parameters = {
     'ultimage': {
-        'version': '1.0.4'
+        'version': '1.0.5'
     },
     'test_image': {
         'path': './demodata/test.png',
