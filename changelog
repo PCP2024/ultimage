@@ -1,6 +1,10 @@
 # Changelog
 Tracking changes to ultimage
 
+## [1.0.3] - 2024.07.08
+### Added
+- Added other default font features to config.json
+
 ## [1.0.2] - 2024.07.08
 ### Added
 - Added default font path to config.json

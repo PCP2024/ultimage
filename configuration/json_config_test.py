@@ -8,8 +8,11 @@ parameters = {
         'path': './demodata/test.png',
         'dimensions': (99, 150, 3)
     },
-    'defaults': {
+    'default_font': {
         'font': './demodata/impact.ttf',
+        'color': '#ffffff',
+        'size': 15,
+        'coordinates': (10, 10)
     },
     'group_members': {
         'Gera': 'Parra',

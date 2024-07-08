@@ -56,7 +56,22 @@ def main():
             else:
                 new_image = resize.shrink(new_image, 1/args.scale)
         if args.text:
-            new_image = text.textover(new_image, args.text[0], int(args.text[1]), int(args.text[2]), color=args.text[3], fsize=int(args.text[4]))
+            if args.text[1] == '':
+                args.text[1] = None
+            else: 
+                args.text[1] = int(args.text[1])
+            if args.text[2] == '':
+                args.text[2] = None
+            else:
+                args.text[2] = int(args.text[2])
+            coords = (args.text[1], args.text[2])
+            if args.text[3] == '':
+                args.text[3] = None
+            if args.text[4] == '':
+                args.text[4] = None
+            else:
+                args.text[4] = int(args.text[4])
+            new_image = text.textover(new_image, args.text[0], coords, color=args.text[3], fsize=args.text[4])
         # show image
         if not args.noshow:
             load.show_image(image)
