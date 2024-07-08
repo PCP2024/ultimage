@@ -6,6 +6,7 @@ import processing.crop as crop
 import processing.rotate as rotate
 import processing.resize as resize
 import processing.textover as text
+import analyze.blur as blur
 import sys
 
 def main():
@@ -23,6 +24,9 @@ def main():
     parser.add_argument("-c", "--crop", nargs=4, type=int, help="The coordinates of the crop region in the form [x_start, x_end, y_start, y_end].")
     parser.add_argument("-rs", "--scale", type=float, help="The factor to rescale the image by (out of 1).")
     parser.add_argument("-t", "--text", nargs=5, type=str, help="The text to overlay on the image, the coordinates, and font size and color in the form ['text' left top color size].")    
+    # add arguments for analysis operations
+    parser.add_argument("-bg", "--blur_gauss", nargs=3, help="The kernel size and sigma for Gaussian blur in the form [ksize1, ksize2, sigma].")
+    parser.add_argument("-bn", "--blur_norm", nargs=2, type=int, help="The kernel size for normalized box blur the form [ksize1, ksize2]")
 
     # parse arguments
     args = parser.parse_args()
@@ -72,6 +76,12 @@ def main():
             else:
                 args.text[4] = int(args.text[4])
             new_image = text.textover(new_image, args.text[0], coords, color=args.text[3], fsize=args.text[4])
+        if args.blur_gauss:
+            ksize = (int(args.blur_gauss[0]),int(args.blur_gauss[1]))
+            new_image = blur.gaussian(new_image, ksize, float(args.blur_gauss[2]))
+        if args.blur_norm:
+            ksize = (int(args.blur_norm[0]),int(args.blur_norm[1]))
+            new_image = blur.normalized_box(new_image, ksize)
         # show image
         if not args.noshow:
             load.show_image(image)
