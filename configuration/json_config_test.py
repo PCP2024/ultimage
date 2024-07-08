@@ -2,11 +2,14 @@ import json
 
 parameters = {
     'ultimage': {
-        'version': '0.1.2'
+        'version': '1.0.2'
     },
     'test_image': {
         'path': './demodata/test.png',
         'dimensions': (99, 150, 3)
+    },
+    'defaults': {
+        'font': './demodata/impact.ttf',
     },
     'group_members': {
         'Gera': 'Parra',
