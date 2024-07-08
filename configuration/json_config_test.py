@@ -2,7 +2,7 @@ import json
 
 parameters = {
     'ultimage': {
-        'version': '1.0.2'
+        'version': '1.0.3'
     },
     'test_image': {
         'path': './demodata/test.png',
