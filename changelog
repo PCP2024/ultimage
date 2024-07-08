@@ -1,9 +1,27 @@
 # Changelog
 Tracking changes to ultimage
 
-## [0.1.4] - 2024.07.07
+## [1.0.3] - 2024.07.08
+### Added
+- Added other default font features to config.json
+
+## [1.0.2] - 2024.07.08
+### Added
+- Added default font path to config.json
+
+### Changed
+- Moved default font to demodata folder
+
+### Removed
+- Deleted resources folder
+
+## [1.0.1] - 2024.07.08
+### Fixed
+- libGL.so.1 error in Dockerfile
+
+## [1.0.0] - 2024.07.07
 ### Added 
-- docker image link in README.md
+- Containerization via Docker
 
 
 ## [0.1.3] - 2024.07.04
