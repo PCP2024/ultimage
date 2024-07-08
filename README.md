@@ -2,9 +2,16 @@
 <img src="https://raw.githubusercontent.com/PCP2024/ultimage/main/demodata/logo.png" height="100" width="100">
 
 ## Overview
-Ultimage is a command-line image processing software that allows users to perform basic image manipulations such as rotation, mirroring, cropping, scaling, and text overlay. The software can load images, apply specified operations, and optionally display or save the processed images.
+Ultimage is a command-line image processing software that allows users to perform basic image manipulations. The software can load images, apply specified operations, and optionally display or save the processed images.
 
-## Installation instructions
+### Features
+- Rotation
+- Mirroring
+- Cropping
+- Scaling
+- Text overlay
+
+## Installation
 Ultimage can be installed either by cloning this repository and installing dependencies, or using Docker.
 ### Using Python
 To install Ultimage using Python, ensure you have Python installed. Clone the repository and install the required dependencies.
