@@ -98,7 +98,7 @@ python3 main_ultimage.py -rs 2 -i input.jpg -o output.jpg -n
 3. Find the container ID with `docker ps -a`
 4. Commit the container to a new image and run a new temporary container:
 ```
-docker commit friendly_fermat temp_image
+docker commit [container nickname] temp_image
 docker run -it --rm --name temp_container temp_image /bin/bash
 ```
 5. In a new terminal window, copy the file from the temporary container to the host:
