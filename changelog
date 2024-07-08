@@ -1,6 +1,13 @@
 # Changelog
 Tracking changes to ultimage
 
+## [1.0.4] - 2024.07.08
+### Added
+- Added more default parameters to config.json
+
+### Changed
+- Moved blur to analyze folder
+
 ## [1.0.3] - 2024.07.08
 ### Added
 - Added other default font features to config.json
