@@ -8,6 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install the dependencies specified in the requirements file
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
 RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
 COPY . .
