@@ -1,5 +1,6 @@
 # Ultimage 1.0
-![Logo](https://github.com/PCP2024/ultimage/demodata/logo.png)
+<img src="https://raw.githubusercontent.com/PCP2024/ultimage/main/demodata/logo.png" height="100" width="100">
+
 ## Overview
 Ultimage is a command-line image processing software that allows users to perform basic image manipulations such as rotation, mirroring, cropping, scaling, and text overlay. The software can load images, apply specified operations, and optionally display or save the processed images.
 
